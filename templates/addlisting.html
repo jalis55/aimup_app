@@ -1,39 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- costum css  -->
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+{% extends 'layout.html' %}
 
-
-    <title>AIMUP - A home for teaching & learning for personal development.</title>
-</head>
-
-
-<body>
-    <nav class="navbar container">
-        <h1 class="logo-wrap">
-            <a href="./index.html">
-                <img src="./img/logo.png">
-            </a>
-        </h1>
-
-        <ul class="navigation">
-            <li class="navigation-item">
-                <a href="./login.html">Log in</a>
-            </li>
-            <li class="navigation-item">
-                <a href="./signup.html">Sign Up</a>
-            </li> 
-            <li class="navigation-item">
-                <a href="./addlisting.html">Add listing</a>
-            </li> 
-            <li class="navigation-item">
-                <a href="./userprofile.html">My Profile</a>
-            </li>
-        </ul>
-    </nav>
+{%block content %}
 
 
 <section class="alert-boxes container">
@@ -137,5 +104,4 @@
 
 
 
-</body>
-</html>
+{% endcontent %}

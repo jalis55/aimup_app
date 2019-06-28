@@ -21,18 +21,25 @@
         </h1>
 
         <ul class="navigation">
+            {% if not session['logged_in'] %}
             <li class="navigation-item">
                 <a href="/login">Log in</a>
             </li>
             <li class="navigation-item">
                 <a href="/signup">Sign Up</a>
             </li> 
+            {% else %}
+            
             <li class="navigation-item">
                 <a href="./addlisting.html">Add listing</a>
             </li> 
             <li class="navigation-item">
                 <a href="./userprofile.html">My Profile</a>
             </li>
+            <li class="navigation-item">
+                <a href="/logout">Log out</a>
+            </li>
+            {% endif %}
         </ul>
     </nav>
 

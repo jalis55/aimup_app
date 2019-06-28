@@ -6,10 +6,17 @@
 
 
       <!-- Something went wrong -->
-      <!-- <div class="alert alert-danger alert-dismissible fade show">
-      <strong>Ooops!</strong> Something went wrong. Try again!
+      {% with messages = get_flashed_messages() %}
+      {%if messages %}
+      <div class="alert alert-danger alert-dismissible fade show">
+      {% for message in messages %}
+      <strong>Ooops!</strong> {{message}}
       <button type="button" class="close" data-dismiss="alert">&times;</button>
-      </div> -->
+      {% endfor %}
+      </div>
+      {% endif %}
+      {% endwith %}
+
 
 
   </section>
@@ -25,19 +32,19 @@
 		        <form action="/userSignUp" method="POST">
 
               <div class="form-group">
-                  <input type="email" name="email" class="form-control" placeholder="Email">
+                  <input type="email" name="email" class="form-control" placeholder="Email" required>
               </div>
 
               <div class="form-group">
-                  <input type="text" name="first_name" class="form-control" placeholder="First Name">
+                  <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
               </div>
 
               <div class="form-group">
-                  <input type="text" name="last_name" class="form-control" placeholder="Last Name">
+                  <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
               </div>
 
               <div class="form-group">
-                  <input type="password" name="password" class="form-control" placeholder="Password">
+                  <input type="password" name="password" class="form-control" placeholder="Password" required>
               </div>
               <button type="submit" class="btn btn-pri">Register</button>
                 

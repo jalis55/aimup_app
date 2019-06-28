@@ -4,16 +4,24 @@
   <section class="alert-boxes container">
 
       <!-- if the user did create a new account -->
-      <!--<div class="alert alert-success alert-dismissible fade show col-6">
-          <strong>Success!</strong> Your account has been created. Now log in.
+      {% with messages = get_flashed_messages() %}
+      {%if messages %}
+      <div class="alert alert-success alert-dismissible fade show col-6">
+        {% for message in messages %}
+          <strong>Success!{{message}}</strong> 
+        {% endfor %}
       <button type="button" class="close" data-dismiss="alert">&times;</button>
-      </div> -->
+      </div> 
+      {% endif %}
+      {% endwith %}
 
       <!-- Something went wrong -->
-      <!-- <div class="alert alert-danger alert-dismissible fade show col-6">
-      <strong>Ooops!</strong> Something went wrong. Try again!
+      {% if error %}
+      <div class="alert alert-danger alert-dismissible fade show col-6">
+      <strong>Ooops!</strong> {{error}}
       <button type="button" class="close" data-dismiss="alert">&times;</button>
-      </div> -->
+      </div>
+      {% endif %}
 
 
   </section>
@@ -27,16 +35,17 @@
         </div>
 
         <div class="at-body">
-          <form>
+          <form action="/userLogin" method="POST">
             <div class="form-group">
-                <input type="email" class="form-control" placeholder="Email">
+                <input type="email" name="email" class="form-control" placeholder="Email">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password">
+                <input type="password" name="password" class="form-control" placeholder="Password">
             </div>
-          </form>
 
-          <button class="btn btn-pri">Log In</button> 
+            <button type="submit" class="btn btn-pri">Log In</button>
+          </form>
+ 
 
           <hr/>
           <small> Need an account? Register <a href="/signup">here.</a> </small>
