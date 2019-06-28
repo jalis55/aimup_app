@@ -1,0 +1,51 @@
+{%extends 'layout.html' %}
+
+{% block content %}
+  <section class="alert-boxes container">
+
+      <!-- if the user did create a new account -->
+      <!--<div class="alert alert-success alert-dismissible fade show col-6">
+          <strong>Success!</strong> Your account has been created. Now log in.
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      </div> -->
+
+      <!-- Something went wrong -->
+      <!-- <div class="alert alert-danger alert-dismissible fade show col-6">
+      <strong>Ooops!</strong> Something went wrong. Try again!
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      </div> -->
+
+
+  </section>
+
+
+<div class="container">
+    <div class="at-form col-6">
+
+        <div class="log-head">
+            <h4>Log in to your account</h4><hr/>    
+        </div>
+
+        <div class="at-body">
+          <form>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password">
+            </div>
+          </form>
+
+          <button class="btn btn-pri">Log In</button> 
+
+          <hr/>
+          <small> Need an account? Register <a href="/signup">here.</a> </small>
+        </div>
+
+
+    </div>
+</div>
+
+             
+
+{% endblock %}

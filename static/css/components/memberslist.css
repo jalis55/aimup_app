@@ -1,0 +1,27 @@
+.listing {
+	-webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.listing img {
+	max-width: 100%;
+    display: block;
+}
+
+.listing .text {
+	padding: 30px;
+}
+
+.listing {
+   	background: #ffffff;
+    border-radius: 5px;
+    padding: 22px;
+    padding-bottom: 24px;
+    margin-left: 10px;
+}
+
+.members-list .listing:hover {
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- costum css  -->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+
+    <title>AIMUP - A home for teaching & learning for personal development.</title>
+</head>
+
+
+<body>
+    <nav class="navbar container">
+        <h1 class="logo-wrap">
+            <a href="./index.html">
+                <img src="./img/logo.png">
+            </a>
+        </h1>
+
+        <ul class="navigation">
+            <li class="navigation-item">
+                <a href="./login.html">Log in</a>
+            </li>
+            <li class="navigation-item">
+                <a href="./signup.html">Sign Up</a>
+            </li> 
+            <li class="navigation-item">
+                <a href="./addlisting.html">Add listing</a>
+            </li> 
+            <li class="navigation-item">
+                <a href="./userprofile.html">My Profile</a>
+            </li>
+        </ul>
+    </nav>
+
+
+<section class="alert-boxes container">
+
+    <!-- if the user clicked on "publish" -->
+    <!--<div class="alert alert-success alert-dismissible fade show col-8">
+        <strong>Success!</strong> Your listing has been published!  
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>-->
+
+    <!-- Something went wrong -->
+    <!-- <div class="alert alert-danger alert-dismissible fade show col-8">
+    <strong>Ooops!</strong> Something went wrong. Try again!
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div> -->
+
+
+</section>
+
+
+<div class="container">
+    <div class="at-form col-8">
+
+        <div class="at-head">
+            <h4>Add your Skills to the list!</h4><hr/>    
+        </div>
+
+        <div class="at-body">
+            <form>
+                <div class="form-group">
+                    <label class="">Title</label>
+                    <small class="form-text text-muted">Describe what you are going to teach to others in one sentence.</small>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label">Summary</label>
+                    <small class="form-text text-muted">Tell your potential students what exactly they are going to learn from you. </small>
+                    <textarea type="text" class="form-control"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label">Your Story</label>
+                    <small class="form-text text-muted">Why do you teach this in particular? What is your motivation? Tell a bit about yourself and why students should choose you as a tutor. </small>
+                    <textarea type="text" class="form-control"></textarea>
+                </div>
+
+                 <div class="form-group">
+                    <label class="form-control-label">Additional information</label>
+                    <small class="form-text text-muted">What else should students know about you or your teaching method? </small>
+                    <textarea type="text" class="form-control"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label">What area are you experienced in?</label>
+                    <select id="input-expertise_area" class="form-control form-control-lg">
+                        <option>please select</option>
+                        <option>Fitness</option>
+                        <option>Mindfulness</option>
+                        <option>Productivity</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label">More specific?</label>
+                    <select class="form-control form-control-lg">
+                        <option>please select</option>
+                      <!--  ----user selected fitness---  -->
+                        <option>Loose Weight</option>
+                        <option>Strength & Conditioning</option>
+                        <option>Run a Marathon</option>
+                        <option>Develop a Fitness Habit</option>
+                     <!--  ---- user selected mindfulness---  -->
+                        <option>meditation</option>
+                        <option>journaling</option>
+                        <option>practice mindfulness</option>
+                    <!--  ---- user selected productivity---  -->
+                        <option>Time management</option>
+                        <option>Focus</option>
+                        <option>Taking Action</option>
+                        <option>Habits</option>
+                    </select>
+                </div>
+
+ 
+                <div class="form-group">
+                    <label class="form-control-label">Where do you wanna teach?</label>
+                    <select class="form-control form-control-lg">
+                        <option>please select</option>
+                        <option>Hamburg</option>
+                        <option>Berlin</option>
+                        <option>Munich</option>
+                    </select>
+                </div>
+            </form>
+
+            <button type="submit" class="btn btn-pri">Publish</button>
+        </div>
+
+</div>
+
+
+
+</body>
+</html>

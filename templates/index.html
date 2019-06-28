@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <section class="alert-boxes container">
+
+        <!-- IF THE USER IS LOGGED IN -->
+        <!--
+        <div class="alert alert-success alert-dismissible fade show col-sm-7">
+            <strong>Success!</strong> You are now logged in! 
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        </div>
+        -->
+
+    </section>
+
+
+	<section class="searchbox container"> 
+		<div id="welcome-form" class="welcome-form col-sm-7"> 
+    		<h1>Find a tutor, to reach your own personal goals. </h1>
+
+    		<form>
+    			<div class="form-group">
+                    <label class="form-control-label">What area are you interested in?</label>
+                    <select id="input-expertise_area" class="form-control form-control-lg">
+                        <option>please select</option>
+                        <option>Fitness</option>
+                        <option>Mindfulness</option>
+                        <option>Productivity</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label">More specific?</label>
+                    <select class="form-control form-control-lg">
+                        <option>please select</option>
+                      <!--  ---- user selected fitness ---  -->
+                        <option>Loose Weight</option>
+                        <option>Strength & Conditioning</option>
+                        <option>Run a Marathon</option>
+                        <option>Develop a Fitness Habit</option>
+                     <!--  ---- user selected  mindfulness  ---  -->
+                        <option>meditation</option>
+                        <option>journaling</option>
+                        <option>practice mindfulness</option>
+                    <!--  ---- user selected  productivity---  -->
+                        <option>Time management</option>
+                        <option>Focus</option>
+                        <option>Taking Action</option>
+                        <option>Habits</option>
+                    </select>
+                </div>
+
+ 
+                <div class="form-group">
+                    <label class="form-control-label">Where?</label>
+                    <select class="form-control form-control-lg">
+                        <option>please select</option>
+                        <option>Hamburg</option>
+                        <option>Berlin</option>
+                        <option>Munich</option>
+                    </select>
+                </div>
+    		</form>
+            <a href="./memberslist.html"> 
+                <button class="btn btn-pri"> Search</button>
+            </a>
+	   </div>
+
+	</section>
+
+	</div>
+
+{% endblock %}
