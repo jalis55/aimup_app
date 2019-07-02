@@ -6,10 +6,16 @@
 <section class="alert-boxes container">
 
     <!-- if the user clicked on "publish" -->
-    <!--<div class="alert alert-success alert-dismissible fade show col-8">
-        <strong>Success!</strong> Your listing has been published!  
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    </div>-->
+      {% with messages = get_flashed_messages() %}
+      {%if messages %}
+      <div class="alert alert-success alert-dismissible fade show col-6">
+        {% for message in messages %}
+          <strong>Success!</strong>{{message}}
+        {% endfor %}
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      </div> 
+      {% endif %}
+      {% endwith %}
 
     <!-- Something went wrong -->
     <!-- <div class="alert alert-danger alert-dismissible fade show col-8">
@@ -29,79 +35,81 @@
         </div>
 
         <div class="at-body">
-            <form>
+            <form action="/add-listing-process" method="POST">
+                <input type="hidden" name="user_id" value="{{user_id}}">
                 <div class="form-group">
                     <label class="">Title</label>
                     <small class="form-text text-muted">Describe what you are going to teach to others in one sentence.</small>
-                    <input type="text" class="form-control">
+                    <input type="text" name="title" class="form-control" required>
                 </div>
 
                 <div class="form-group">
                     <label class="form-control-label">Summary</label>
                     <small class="form-text text-muted">Tell your potential students what exactly they are going to learn from you. </small>
-                    <textarea type="text" class="form-control"></textarea>
+                    <textarea type="text" name="summary" class="form-control" required></textarea>
                 </div>
 
                 <div class="form-group">
                     <label class="form-control-label">Your Story</label>
                     <small class="form-text text-muted">Why do you teach this in particular? What is your motivation? Tell a bit about yourself and why students should choose you as a tutor. </small>
-                    <textarea type="text" class="form-control"></textarea>
+                    <textarea type="text" name="story" class="form-control" required></textarea>
                 </div>
 
                  <div class="form-group">
                     <label class="form-control-label">Additional information</label>
                     <small class="form-text text-muted">What else should students know about you or your teaching method? </small>
-                    <textarea type="text" class="form-control"></textarea>
+                    <textarea type="text" name="additional_info" class="form-control" required></textarea>
                 </div>
 
                 <div class="form-group">
                     <label class="form-control-label">What area are you experienced in?</label>
-                    <select id="input-expertise_area" class="form-control form-control-lg">
-                        <option>please select</option>
-                        <option>Fitness</option>
-                        <option>Mindfulness</option>
-                        <option>Productivity</option>
+                    <select id="input-expertise_area" name="expertise_area" class="form-control form-control-lg" required>
+                        <option value="Not Found">please select</option>
+                        <option value="Fitness">Fitness</option>
+                        <option value="Mindfulness">Mindfulness</option>
+                        <option value="Productivity">Productivity</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label class="form-control-label">More specific?</label>
-                    <select class="form-control form-control-lg">
-                        <option>please select</option>
+                    <select class="form-control form-control-lg" name="additional_specification" required>
+                        <option value="Not Found">please select</option>
                       <!--  ----user selected fitness---  -->
-                        <option>Loose Weight</option>
-                        <option>Strength & Conditioning</option>
-                        <option>Run a Marathon</option>
-                        <option>Develop a Fitness Habit</option>
+                        <option value="Loose Weight">Loose Weight</option>
+                        <option value="Strength & Conditioning">Strength & Conditioning</option>
+                        <option value="Run a Marathon">Run a Marathon</option>
+                        <option value="Develop a Fitness Habit">Develop a Fitness Habit</option>
                      <!--  ---- user selected mindfulness---  -->
-                        <option>meditation</option>
-                        <option>journaling</option>
-                        <option>practice mindfulness</option>
+                        <option value="meditation">meditation</option>
+                        <option value="journaling">journaling</option>
+                        <option value="practice mindfulness">practice mindfulness</option>
                     <!--  ---- user selected productivity---  -->
-                        <option>Time management</option>
-                        <option>Focus</option>
-                        <option>Taking Action</option>
-                        <option>Habits</option>
+                        <option value="Time management">Time management</option>
+                        <option value="Focus">Focus</option>
+                        <option value="Taking Action">Taking Action</option>
+                        <option value="Habits">Habits</option>
                     </select>
                 </div>
 
  
                 <div class="form-group">
                     <label class="form-control-label">Where do you wanna teach?</label>
-                    <select class="form-control form-control-lg">
-                        <option>please select</option>
-                        <option>Hamburg</option>
-                        <option>Berlin</option>
-                        <option>Munich</option>
+                    <select class="form-control form-control-lg" name="teaching" required>
+                        <option value="Not Found">please select</option>
+                        <option value="Hamburg">Hamburg</option>
+                        <option value="Berlin">Berlin</option>
+                        <option value="Munich">Munich</option>
                     </select>
                 </div>
+                <button type="submit" class="btn btn-pri">Publish</button>
             </form>
 
-            <button type="submit" class="btn btn-pri">Publish</button>
+            
         </div>
 
 </div>
 
 
 
-{% endcontent %}
+{% endblock %}

@@ -6,6 +6,12 @@
     <!-- costum css  -->
    
     <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='./css/main.css')}}">
+    <!-- jquery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- custom javascript -->
+    <script src="{{url_for('static',filename='./js/custom.js')}}"></script>
+
+
 
 
   <title>AIMUP - A home for teaching & learning for personal development.</title>
@@ -31,10 +37,10 @@
             {% else %}
             
             <li class="navigation-item">
-                <a href="./addlisting.html">Add listing</a>
+                <a href="/add-listing">Add listing</a>
             </li> 
             <li class="navigation-item">
-                <a href="./userprofile.html">My Profile</a>
+                <a href="/user-profile">My Profile</a>
             </li>
             <li class="navigation-item">
                 <a href="/logout">Log out</a>
